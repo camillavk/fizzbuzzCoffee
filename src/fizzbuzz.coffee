@@ -1,7 +1,11 @@
 class Fizzbuzz
 	isDivisibleByThree: (number) ->
-		number % 3 == 0
+		@isDivisibleBy(3, number)
 	isDivisibleByFive: (number) ->
-		number % 5 == 0
+		@isDivisibleBy(5, number)
+	isDivisibleByFifteen: (number) ->
+		@isDivisibleBy(15, number)
+	isDivisibleBy: (divisor, number) ->
+		number % divisor == 0
 
 module.exports = Fizzbuzz
